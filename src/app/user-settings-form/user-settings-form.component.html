@@ -1,6 +1,10 @@
-  <div class="form-line" fxLayout.xs="column" fxLayout="row">
-  <mat-form-field fxFlex>
-    <input matInput placeholder="Name">
-  </mat-form-field>
-  <button fxFlex="20%" fxFlexAlign="start" mat-raised-button>Ok</button>
-  </div>
+  <form class="form-space" #userForm="ngForm" fxLayout="column">
+    <div class="form-line" fxLayout.xs="column" fxLayout="row">
+      <mat-form-field fxFlex>
+        <input matInput placeholder="Name" name="userName" [(ngModel)]="userName">
+      </mat-form-field>
+      <button fxFlex="20%" fxFlexAlign="start" mat-raised-button>Ok</button>
+    </div>
+  </form>
+
+  {{userForm.value | json}}
