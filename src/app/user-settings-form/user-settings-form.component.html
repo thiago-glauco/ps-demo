@@ -1,9 +1,9 @@
-  <form class="form-space" #userForm="ngForm" fxLayout="column">
+  <form class="form-space" #userForm="ngForm" fxLayout="column" ngNativeValidate>
     <div class="form-line" fxLayout.xs="column" fxLayout="row">
       <mat-form-field fxFlex>
-        <input matInput placeholder="Name" name="userName" [(ngModel)]="userName">
+        <input matInput placeholder="Name" name="userName" [(ngModel)]="userName" required >
       </mat-form-field>
-      <button fxFlex="20%" fxFlexAlign="start" mat-raised-button>Ok</button>
+      <input mat-button type="submit" fxFlex="20%" fxFlexAlign="start" value="Ok">
     </div>
   </form>
 
