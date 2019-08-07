@@ -5,8 +5,8 @@
         required minLength="4" maxlength="80" pattern="^\w+(\s\w+){1,10}">
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="text" placeholder="Telephone" name="tel" required
-      [(ngModel)]="user.Telephone">
+      <input matInput type="tel" placeholder="Telephone" name="tel" [(ngModel)]="user.tel" 
+      required minlength="8" maxlength="15">
     </mat-form-field>
     <mat-form-field fxFlex>
       <input matInput type="email" placeholder="E-Mail" name="email" [(ngModel)]="user.email" required >
