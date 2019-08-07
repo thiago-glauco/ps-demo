@@ -1,4 +1,4 @@
-  <form class="form-space" #userForm="ngForm" fxLayout="column" ngNativeValidate>
+  <form class="form-space" fxLayout="column" #userForm="ngForm" (ngSubmit)="onSubmit()" ngNativeValidate>
     <mat-form-field fxFlex>
       <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" required >
     </mat-form-field>
@@ -9,14 +9,14 @@
       <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #password required >
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="password" placeholder="Confirm Password" name="confirm-password" #confirmPassword required >
+      <input matInput type="password" placeholder="Confirm Password" name="confirm-password" #confirmPassword  [(ngModel)]="user.confirmPassword" required >
     </mat-form-field>
     <mat-form-field fxFlex>
       <input matInput type="text" placeholder="Country" name="country" required
       [(ngModel)]="user.address">
     </mat-form-field>
 
-    <button mat-raised-button type="button" fxFlex="20%" fxFlexAlign="start">Enviar</button>
+    <button mat-raised-button type="submit" fxFlex="20%" fxFlexAlign="center" [disabled]="!userForm.form.valid">Enviar</button>
   </form>
 
   {{userForm.value | json}}
