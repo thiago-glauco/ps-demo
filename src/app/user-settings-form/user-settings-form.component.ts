@@ -1,3 +1,5 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { User } from '../shared/user';
 
@@ -7,8 +9,10 @@ import { User } from '../shared/user';
   styleUrls: ['./user-settings-form.component.css']
 })
 export class UserSettingsFormComponent implements OnInit {
-  userName: string;
-  constructor() { }
+  user: User = new User();
+  constructor( ) {
+    console.dir(this.user)
+  }
   ngOnInit() {
     
   }
