@@ -1,24 +1,22 @@
   <form class="form-space" #userForm="ngForm" fxLayout="column" ngNativeValidate>
-    <div class="form-line" fxLayout="column">
-      <mat-form-field fxFlex>
-        <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" required >
-      </mat-form-field>
-      <mat-form-field fxFlex>
-        <input matInput type="email" placeholder="E-Mail" name="email" [(ngModel)]="user.email" required >
-      </mat-form-field>
-      <mat-form-field fxFlex>
-        <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #password required >
-      </mat-form-field>
-      <mat-form-field fxFlex>
-        <input matInput type="password" placeholder="Confirm Password" name="confirm-password" #confirmPassword required >
-      </mat-form-field>
-      <mat-form-field fxFlex>
-        <input matInput type="text" placeholder="County" name="country" required
-        [(ngModel)]="user.address">
-      </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" required >
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="email" placeholder="E-Mail" name="email" [(ngModel)]="user.email" required >
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #password required >
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="password" placeholder="Confirm Password" name="confirm-password" #confirmPassword required >
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="Country" name="country" required
+      [(ngModel)]="user.address">
+    </mat-form-field>
 
-      <button mat-raised-button type="button" fxFlex="20%" fxFlexAlign="start">Enviar</button>
-    </div>
+    <button mat-raised-button type="button" fxFlex="20%" fxFlexAlign="start">Enviar</button>
   </form>
 
   {{userForm.value | json}}
