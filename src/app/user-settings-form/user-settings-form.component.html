@@ -1,20 +1,23 @@
   <form class="form-space" fxLayout="column" #userForm="ngForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+    <p>Please, informe your personal and login info:</p>
     <mat-form-field fxFlex>
-      <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" required >
+      <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" 
+        required minLength="4" maxlength="80" pattern="^\w+(\s\w+){1,10}">
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="Telephone" name="tel" required
+      [(ngModel)]="user.Telephone">
     </mat-form-field>
     <mat-form-field fxFlex>
       <input matInput type="email" placeholder="E-Mail" name="email" [(ngModel)]="user.email" required >
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #password required >
+      <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #password required minlength="6" maxlength="8" #password="ngModel">
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="password" placeholder="Confirm Password" name="confirm-password" #confirmPassword  [(ngModel)]="user.confirmPassword" required >
+      <input matInput type="password" placeholder="Confirm Password" name="confirmPassword" #confirmPassword  [(ngModel)]="user.confirmPassword" required minlength="6" maxlength="8" #confirmPassword="ngModel">
     </mat-form-field>
-    <mat-form-field fxFlex>
-      <input matInput type="text" placeholder="Country" name="country" required
-      [(ngModel)]="user.address">
-    </mat-form-field>
+    <p>Please, informe your address:</p>
 
     <button mat-raised-button type="submit" fxFlex="20%" fxFlexAlign="center" [disabled]="!userForm.form.valid">Enviar</button>
   </form>
