@@ -9,10 +9,16 @@ import { UserPersonalData } from '../shared/user-personal-data';
   styleUrls: ['./user-data-form.component.css']
 })
 export class UserDataFormComponent implements OnInit {
-
-  constructor() { }
-
+  user: User = new User();
+  constructor( ) {
+    console.dir(this.user)
+  }
   ngOnInit() {
+    
+  }
+
+  onSubmit() {
+    
   }
 
 }
