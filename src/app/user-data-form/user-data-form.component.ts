@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../shared/user';
+import { Address } from '../shared/address';
+import { UserPersonalData } from '../shared/user-personal-data';
 
 @Component({
   selector: 'app-user-data-form',
