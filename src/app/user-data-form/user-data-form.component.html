@@ -24,15 +24,13 @@
     </mat-form-field>
     <mat-divider></mat-divider>
 
-
-
     <!--This area deal with password -->
     <div class="password" fxFlex fxLayout="column">
     <div class="toggle-button" fxLayout="row" fxLayoutAlign="center center">
       <p fxFlex>Do you want to change your password?</p>
       <mat-button-toggle-group  #group="matButtonToggleGroup" value="no">
         <mat-button-toggle value="no" aria-label="turn on passord changes" fxFlex fxAlign="center">
-        No
+          No
         </mat-button-toggle>
         <mat-button-toggle value="yes" aria-label="Turn off password changes" fxFlex fxAlign="center">
           Yes
@@ -41,19 +39,68 @@
     </div>
     <mat-form-field fxFlex>
       <input matInput [disabled]="group.value !== 'yes'"
-      [type]="hidePassword ? 'password' : 'text'" placeholder="Password" name="password" [(ngModel)]="user.password" #password="ngModel"  minlength="6" maxlength="8" >
+      [type]="hidePassword ? 'password' : 'text'" placeholder="Password" name="password"
+      [(ngModel)]="user.password" #password="ngModel"  minlength="6" maxlength="8" >
     </mat-form-field>
     <mat-form-field fxFlex>
       <input matInput [disabled]="group.value !== 'yes'"
-      [type]="hidePassword ? 'password' : 'text'" placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="user.confirmPassword" minlength="6" maxlength="8" #confirmPassword="ngModel">
+      [type]="hidePassword ? 'password' : 'text'" placeholder="Confirm Password" name="confirmPassword"
+      [(ngModel)]="user.confirmPassword" minlength="6" maxlength="8" #confirmPassword="ngModel">
     </mat-form-field>
     <button fxFlex flxAlign="center" mat-icon-button [disabled]="group.value !== 'yes'" (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
     <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
     </div>
     <mat-divider></mat-divider>
-    <p>Please, informe your address:</p>
 
+    <!--This area deal with docs -->
+    <p>Documents</p>
+    <mat-divider></mat-divider>
+
+    <!--This area deal with address data -->
+    <p>Please, informe your address:</p>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="Street" name="street" [(ngModel)]="user.street" 
+        required minLength="2" maxlength="80" #streetName="ngModel">
+        <mat-error *ngIf="streetName.touched && streetName.invalid">
+          Street is required.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="Number" name="streetNumber" [(ngModel)]="user.num" 
+        required minLength="1" maxlength="10" #streetNumber="ngModel">
+        <mat-error *ngIf="streetNumber.touched && streetNumber.invalid">
+          Enter a valid Street name.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="Complement" name="streetComplement" [(ngModel)]="user.complement" 
+        minLength="1" maxlength="80" #streetComplement="ngModel">
+        <mat-error *ngIf="streetComplement.touched && streetComplement.invalid">
+          Enter a Valid complement.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="City" name="city" [(ngModel)]="user.city" 
+        required minLength="1" maxlength="80" #city="ngModel">
+        <mat-error *ngIf="city.touched && city.invalid" pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){0,10}">
+          Enter a Valid City Name.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="State" name="state" [(ngModel)]="user.state" 
+        required minLength="1" maxlength="80" #state="ngModel">
+        <mat-error *ngIf="state.touched && state.invalid" pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){0,10}">
+          Enter a Valid State Name.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="text" placeholder="Country" name="country" [(ngModel)]="user.country" 
+        required minLength="1" maxlength="80" #country="ngModel">
+        <mat-error *ngIf="country.touched && country.invalid" pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){0,10}">
+          Enter a Valid Country Name.
+        </mat-error>
+    </mat-form-field>
     <button mat-raised-button type="submit" fxFlex="20%" fxFlexAlign="center" [disabled]="!userDataForm.form.valid">Enviar</button>
   </form>
 
