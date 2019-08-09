@@ -9,6 +9,8 @@ import { UserPersonalData } from '../shared/user-personal-data';
   styleUrls: ['./user-data-form.component.css']
 })
 export class UserDataFormComponent implements OnInit {
+  //Form variables:
+  hidePassword: boolean = true;
   user: User = new User();
 
   constructor( ) {

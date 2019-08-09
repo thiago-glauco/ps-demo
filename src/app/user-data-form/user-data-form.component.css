@@ -1,3 +1,6 @@
-.toggle-button {
-  max-width: 40%;
+.toggle-button p{
+  display: inline;
+}
+.toogle-button mat-button-toggle-group{
+  display: inline;
 }
