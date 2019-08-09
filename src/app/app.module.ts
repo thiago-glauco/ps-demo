@@ -30,7 +30,7 @@ import { UserDataFormComponent } from './user-data-form/user-data-form.component
     MatInputModule,
     MatIconModule,
     MatDividerModule,
-    
+    MatButtonToggleModule
     ],
   declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent ],
   bootstrap:    [ AppComponent ]

@@ -13,6 +13,14 @@
     </mat-form-field>
     <mat-divider></mat-divider>
     <p>Do you want to change your password?</p>
+    <mat-button-toggle-group class="toggle-button" #group="matButtonToggleGroup" fxFlex="10%" fxLayout="row" fxLayoutAlign="start center">
+    <mat-button-toggle value="left" aria-label="turn on passord changes" fxFlex fxAlign="center">
+     No
+    </mat-button-toggle>
+    <mat-button-toggle value="center" aria-label="Turn off password changes" fxFlex fxAlign="center">
+      Yes
+    </mat-button-toggle>
+    </mat-button-toggle-group>
     <mat-form-field fxFlex>
       <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #password="ngModel" required minlength="6" maxlength="8" >
     </mat-form-field>
