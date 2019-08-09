@@ -66,15 +66,15 @@
     <mat-form-field fxFlex>
       <input matInput type="number" placeholder="CPF"
       name="tel" [(ngModel)]="user.cpf" #cpf="ngModel"
-      required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
+      required minlength="8" maxlength="15" pattern="^\d+$">
       <mat-error *ngIf="cpf.touched && cpf.invalid">
-          A valid phone is required.
+          A valid cpf is required.
       </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
       <input matInput type="number" placeholder="CNH"
       name="tel" [(ngModel)]="user.cnh" #cnh="ngModel"
-      required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
+      required minlength="8" maxlength="15" pattern="^\d+$">
       <mat-error *ngIf="cnh.touched && cnh.invalid">
           A valid phone is required.
       </mat-error>
