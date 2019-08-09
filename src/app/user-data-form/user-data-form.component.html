@@ -55,6 +55,30 @@
 
     <!--This area deal with docs -->
     <p>Documents</p>
+    <mat-form-field fxFlex>
+      <input matInput type="tel" placeholder="Telephone"
+      name="tel" [(ngModel)]="user.tel" #tel="ngModel"
+      required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
+      <mat-error *ngIf="tel.touched && tel.invalid">
+          A valid phone is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="tel" placeholder="Telephone"
+      name="tel" [(ngModel)]="user.tel" #tel="ngModel"
+      required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
+      <mat-error *ngIf="tel.touched && tel.invalid">
+          A valid phone is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput type="tel" placeholder="Telephone"
+      name="tel" [(ngModel)]="user.tel" #tel="ngModel"
+      required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
+      <mat-error *ngIf="tel.touched && tel.invalid">
+          A valid phone is required.
+      </mat-error>
+    </mat-form-field>
     <mat-divider></mat-divider>
 
     <!--This area deal with address data -->
