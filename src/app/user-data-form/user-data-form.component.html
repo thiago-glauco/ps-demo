@@ -22,11 +22,12 @@
           A valid email is required.
       </mat-error>
     </mat-form-field>
-
-
-
     <mat-divider></mat-divider>
+
+
+
     <!--This area deal with password -->
+    <div class="password" fxFlex fxLayout="column">
     <div class="toggle-button" fxLayout="row" fxLayoutAlign="center center">
       <p fxFlex>Do you want to change your password?</p>
       <mat-button-toggle-group  #group="matButtonToggleGroup" value="no">
@@ -46,9 +47,11 @@
       <input matInput [disabled]="group.value !== 'yes'"
       [type]="hidePassword ? 'password' : 'text'" placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="user.confirmPassword" minlength="6" maxlength="8" #confirmPassword="ngModel">
     </mat-form-field>
-    <button mat-icon-button [disabled]="group.value !== 'yes'" (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <button fxFlex flxAlign="center" mat-icon-button [disabled]="group.value !== 'yes'" (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
     <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
+    </div>
+    <mat-divider></mat-divider>
     <p>Please, informe your address:</p>
 
     <button mat-raised-button type="submit" fxFlex="20%" fxFlexAlign="center" [disabled]="!userDataForm.form.valid">Enviar</button>
