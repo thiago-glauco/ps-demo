@@ -13,4 +13,7 @@ export class User implements Address, LoginData{
   logged: boolean;
   username: string;
   password: string;
+  rg: string;
+  cpf: string;
+  cnh: string;
 }

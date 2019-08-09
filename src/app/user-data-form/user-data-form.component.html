@@ -56,26 +56,26 @@
     <!--This area deal with docs -->
     <p>Documents</p>
     <mat-form-field fxFlex>
-      <input matInput type="number" placeholder="Telephone"
-      name="tel" [(ngModel)]="user.tel" #tel="ngModel"
+      <input matInput type="number" placeholder="RG"
+      name="rg" [(ngModel)]="user.rg" #rg="ngModel"
       required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
-      <mat-error *ngIf="tel.touched && tel.invalid">
+      <mat-error *ngIf="rg.touched && rg.invalid">
           A valid phone is required.
       </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="number" placeholder="Telephone"
-      name="tel" [(ngModel)]="user.tel" #tel="ngModel"
+      <input matInput type="number" placeholder="CPF"
+      name="tel" [(ngModel)]="user.cpf" #cpf="ngModel"
       required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
-      <mat-error *ngIf="tel.touched && tel.invalid">
+      <mat-error *ngIf="cpf.touched && cpf.invalid">
           A valid phone is required.
       </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="number" placeholder="Telephone"
-      name="tel" [(ngModel)]="user.tel" #tel="ngModel"
+      <input matInput type="number" placeholder="CNH"
+      name="tel" [(ngModel)]="user.cnh" #cnh="ngModel"
       required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
-      <mat-error *ngIf="tel.touched && tel.invalid">
+      <mat-error *ngIf="cnh.touched && cnh.invalid">
           A valid phone is required.
       </mat-error>
     </mat-form-field>
