@@ -1,6 +1,6 @@
 import { LoginData } from "./login-data";
 import {Address} from "./address";
-export class User implements Address{
+export class User implements Address, LoginData{
   name: string;
   email: string;
   tel: string;

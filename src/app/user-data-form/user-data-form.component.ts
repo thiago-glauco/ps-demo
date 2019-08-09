@@ -10,6 +10,7 @@ import { UserPersonalData } from '../shared/user-personal-data';
 })
 export class UserDataFormComponent implements OnInit {
   user: User = new User();
+
   constructor( ) {
     console.dir(this.user)
   }

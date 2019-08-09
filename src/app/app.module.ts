@@ -12,6 +12,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -29,6 +30,7 @@ import { UserDataFormComponent } from './user-data-form/user-data-form.component
     MatInputModule,
     MatIconModule,
     MatDividerModule,
+    
     ],
   declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent ],
   bootstrap:    [ AppComponent ]
