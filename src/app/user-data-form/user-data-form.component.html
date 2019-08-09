@@ -60,7 +60,7 @@
       name="rg" [(ngModel)]="user.rg" #rg="ngModel"
       required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
       <mat-error *ngIf="rg.touched && rg.invalid">
-          A valid phone is required.
+          A valid RG number is required.
       </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
