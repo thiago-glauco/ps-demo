@@ -3,18 +3,28 @@
     <p>Please, check your personal data, address, contact info and login password:</p>
     <mat-form-field fxFlex>
       <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" 
-        required minLength="4" maxlength="80" pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){1,10}">
+        required minLength="4" maxlength="80" pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){1,10}" #userName="ngModel">
+        <mat-error *ngIf="userName.touched && userName.invalid">
+          Full Name is required.
+        </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="tel" placeholder="Telephone" name="tel" [(ngModel)]="user.tel" 
-      required minlength="8" maxlength="15" pattern="^\d+">
+      <input matInput type="tel" placeholder="Telephone"
+      name="tel" [(ngModel)]="user.tel" #tel="ngModel"
+      required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
+      <mat-error *ngIf="tel.touched && tel.invalid">
+          A valid phone is required.
+      </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="email" placeholder="E-Mail" name="email" [(ngModel)]="user.email" required >
+      <input matInput type="email" placeholder="E-Mail" name="email" [(ngModel)]="user.email" required #email="ngModel">
+      <mat-error *ngIf="email.touched && email.invalid">
+          A valid email is required.
+      </mat-error>
     </mat-form-field>
 
 
-    
+
     <mat-divider></mat-divider>
     <!--This area deal with password -->
     <div class="toggle-button" fxLayout="row" fxLayoutAlign="center center">
