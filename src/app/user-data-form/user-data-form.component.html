@@ -56,7 +56,7 @@
     <!--This area deal with docs -->
     <p>Documents</p>
     <mat-form-field fxFlex>
-      <input matInput type="number" placeholder="RG"
+      <input matInput type="text" placeholder="RG"
       name="rg" [(ngModel)]="user.rg" #rg="ngModel"
       required minlength="8" maxlength="15" pattern="^(\+?\d+)(\s?-?\d+){0,3}">
       <mat-error *ngIf="rg.touched && rg.invalid">
@@ -64,7 +64,7 @@
       </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="number" placeholder="CPF"
+      <input matInput type="text" placeholder="CPF"
       name="tel" [(ngModel)]="user.cpf" #cpf="ngModel"
       required minlength="8" maxlength="15" pattern="^\d+$">
       <mat-error *ngIf="cpf.touched && cpf.invalid">
@@ -72,11 +72,11 @@
       </mat-error>
     </mat-form-field>
     <mat-form-field fxFlex>
-      <input matInput type="number" placeholder="CNH"
-      name="tel" [(ngModel)]="user.cnh" #cnh="ngModel"
+      <input matInput type="text" placeholder="CNH"
+      name="cnh" [(ngModel)]="user.cnh" #cnh="ngModel"
       required minlength="8" maxlength="15" pattern="^\d+$">
       <mat-error *ngIf="cnh.touched && cnh.invalid">
-          A valid phone is required.
+          A valid cnh is required.
       </mat-error>
     </mat-form-field>
     <mat-divider></mat-divider>
