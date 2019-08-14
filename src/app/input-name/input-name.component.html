@@ -1,0 +1,9 @@
+<p>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" 
+      required minLength="4" maxlength="80" pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){1,10}" #userName="ngModel">
+      <mat-error *ngIf="userName.touched && userName.invalid">
+        {{errorMessage}}
+      </mat-error>
+  </mat-form-field>
+</p>

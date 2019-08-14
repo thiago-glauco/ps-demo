@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
 import { UserDataFormComponent } from './user-data-form/user-data-form.component';
+import { InputNameComponent } from './input-name/input-name.component';
 
 @NgModule({
   imports:      [ 
@@ -32,7 +33,7 @@ import { UserDataFormComponent } from './user-data-form/user-data-form.component
     MatDividerModule,
     MatButtonToggleModule
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent ],
+  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
