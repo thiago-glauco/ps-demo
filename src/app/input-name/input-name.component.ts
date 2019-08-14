@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputNameComponent implements OnInit {
 
+  inputData = {
+    name: "Hello",
+    required: true,
+    placeHolder: "teste",
+    matIconName: "sentiment_very_satisfied",
+    matIconPos: "",
+  }
+
   constructor() { }
 
   ngOnInit() {

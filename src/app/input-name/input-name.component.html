@@ -1,9 +1,24 @@
 <p>
   <mat-form-field>
-    <input matInput type="text" placeholder="Name" name="userName" [(ngModel)]="user.name" 
-      required minLength="4" maxlength="80" pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){1,10}" #userName="ngModel">
-      <mat-error *ngIf="userName.touched && userName.invalid">
-        {{errorMessage}}
+    <mat-label *ngIf="inputData.label">{{inputData.labe}}</mat-label>
+    <input matInput type="text"
+    [placeholder]="inputData.placeHolder"
+    [name]="inputData.name"
+    [(ngModel)]="inputData.value" 
+      [required]="inputData.required"
+      [minLength]="inputData.maxLength"
+      [maxlength]="inputData.maxLength"
+      pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){1,10}"
+      #name="ngModel">
+      <mat-icon
+        *ngIf="inputData.matIconName"
+        matSuffix
+        color="inputData.matIconColor">{{inputData.matIconName}}</mat-icon>
+      <mat-error *ngIf="name.touched && name.invalid">
+        {{inputData.errorMessage}}
       </mat-error>
+      <mat-hint *ngIf="inputData.hint">{inputData.hint}</mat-hint>
   </mat-form-field>
+  
 </p>
+{{inputData.value}}
