@@ -1,6 +1,8 @@
 <p>
-  <mat-form-field>
-    <mat-label *ngIf="inputData.label">{{inputData.labe}}</mat-label>
+  <!--Componente otimizado para nomes-->
+  <mat-form-field 
+  [appearance]="inputData.appearance ? inputData.appearance : standard">
+    <mat-label *ngIf="inputData.label">{{inputData.label}}</mat-label>
     <input matInput type="text"
     [placeholder]="inputData.placeHolder"
     [name]="inputData.name"
@@ -10,15 +12,21 @@
       [maxlength]="inputData.maxLength"
       pattern="^[\wÀ-ú]+(\s[\wÀ-ú]+){1,10}"
       #name="ngModel">
+      <!--icon and icons position -->
       <mat-icon
-        *ngIf="inputData.matIconName"
+        *ngIf="inputData.matIconName && inputData.matIconPos === 'suffix'"
         matSuffix
         color="inputData.matIconColor">{{inputData.matIconName}}</mat-icon>
+      <mat-icon
+        *ngIf="inputData.matIconName && inputData.matIconPos === 'prefix'"
+        matPrefix
+        color="inputData.matIconColor">{{inputData.matIconName}}</mat-icon>
+        <!--errors -->
       <mat-error *ngIf="name.touched && name.invalid">
         {{inputData.errorMessage}}
       </mat-error>
-      <mat-hint *ngIf="inputData.hint">{inputData.hint}</mat-hint>
+      <!--hint -->
+      <mat-hint *ngIf="inputData.hint">{{inputData.hint}}</mat-hint>
   </mat-form-field>
-  
 </p>
 {{inputData.value}}
