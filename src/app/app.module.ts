@@ -22,6 +22,7 @@ import { UserDataFormComponent } from './user-data-form/user-data-form.component
 import { InputNameComponent } from './input-name/input-name.component';
 import { GenericCardComponent } from './generic-card/generic-card.component';
 import { CardLineComponent } from './card-line/card-line.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports:      [ 
@@ -37,7 +38,7 @@ import { CardLineComponent } from './card-line/card-line.component';
     MatButtonToggleModule,
     MatCardModule
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent ],
+  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
