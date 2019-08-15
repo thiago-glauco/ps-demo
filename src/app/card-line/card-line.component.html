@@ -1,5 +1,4 @@
-<div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px">
-  <app-generic-card fxFlex></app-generic-card>
-  <app-generic-card fxFlex></app-generic-card>
-  <app-generic-card fxFlex></app-generic-card>
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+  <app-generic-card fxFlex 
+  *ngFor="let cardData of cardsObject" [cardData]="cardData"></app-generic-card>
 </div>
