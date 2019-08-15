@@ -1,5 +1,5 @@
 <mat-card fxFlex class="generic-card" [class.mat-elevation-z4]="true">
-  <img mat-card-image [src]="cardData.imgSrc">
+  <img mat-card-image *ngIf="cardData.imgSrc" [src]="cardData.imgSrc">
   <mat-card-title-group >
     
     <mat-card-title >
