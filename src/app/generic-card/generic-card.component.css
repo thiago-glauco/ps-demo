@@ -1,8 +1,6 @@
 mat-card {
-  background-color: snow;
+  background-color: mistyrose;
   border-left: 10px solid salmon;
+
 }
 
-mat-card img {
- text-align: center;
-}
