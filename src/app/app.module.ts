@@ -21,6 +21,7 @@ import { UserSettingsFormComponent } from './user-settings-form/user-settings-fo
 import { UserDataFormComponent } from './user-data-form/user-data-form.component';
 import { InputNameComponent } from './input-name/input-name.component';
 import { GenericCardComponent } from './generic-card/generic-card.component';
+import { CardLineComponent } from './card-line/card-line.component';
 
 @NgModule({
   imports:      [ 
@@ -36,7 +37,7 @@ import { GenericCardComponent } from './generic-card/generic-card.component';
     MatButtonToggleModule,
     MatCardModule
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent ],
+  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
