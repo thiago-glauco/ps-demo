@@ -23,6 +23,7 @@ import { InputNameComponent } from './input-name/input-name.component';
 import { GenericCardComponent } from './generic-card/generic-card.component';
 import { CardLineComponent } from './card-line/card-line.component';
 import { HeaderComponent } from './header/header.component';
+import { DonateCardComponent } from './donate-card/donate-card.component';
 
 @NgModule({
   imports:      [ 
@@ -38,7 +39,7 @@ import { HeaderComponent } from './header/header.component';
     MatButtonToggleModule,
     MatCardModule
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent ],
+  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
