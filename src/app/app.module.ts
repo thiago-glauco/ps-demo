@@ -13,12 +13,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
 import { UserDataFormComponent } from './user-data-form/user-data-form.component';
 import { InputNameComponent } from './input-name/input-name.component';
+import { GenericCardComponent } from './generic-card/generic-card.component';
 
 @NgModule({
   imports:      [ 
@@ -31,9 +33,10 @@ import { InputNameComponent } from './input-name/input-name.component';
     MatInputModule,
     MatIconModule,
     MatDividerModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatCardModule
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent ],
+  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
