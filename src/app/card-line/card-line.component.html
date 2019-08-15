@@ -1,4 +1,4 @@
-<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
-  <app-generic-card fxFlex 
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px" fxLayoutAlign.gt-sm="stretch stretch">
+  <app-generic-card fxFlex="grow" fxAlign="baseline"
   *ngFor="let cardData of cardsObject" [cardData]="cardData"></app-generic-card>
 </div>
