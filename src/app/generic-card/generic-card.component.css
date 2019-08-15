@@ -2,3 +2,7 @@ mat-card {
   background-color: snow;
   border-left: 10px solid salmon;
 }
+
+mat-card img {
+ text-align: center;
+}
