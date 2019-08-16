@@ -29,6 +29,7 @@ import { HeaderComponent } from './header/header.component';
 import { DonateCardComponent } from './donate-card/donate-card.component';
 import { CarouselComponent } from './carousel/carousel.component';
 
+
 @NgModule({
   imports:      [ 
     BrowserModule,
@@ -44,7 +45,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     MatCardModule,
     CarouselModule
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent, CarouselComponent ],
+  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent, CarouselComponent, ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
