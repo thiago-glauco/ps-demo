@@ -1,0 +1,6 @@
+carousel-component {
+  max-width: 80%;
+  max-height: 400px;
+  overflow: hide;
+  margin: auto;
+}
