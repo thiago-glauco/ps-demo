@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-
+  @ViewChild('topCarousel') topCarousel: CarouselComponent;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  reestartCarousel($event) {
+    this.topCarousel.slideTo(0);
   }
 
 }

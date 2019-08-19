@@ -1,5 +1,5 @@
 <carousel-component #topCarousel [autoPlay]="true"
-  [delayAutoPlay]="3000" >
+  [delayAutoPlay]="3000" (onReachEnd)="reestartCarousel($event)">
     <div class="item-carousel"><img src="https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" /></div>
     <div class="item-carousel">
         <div class="b">
