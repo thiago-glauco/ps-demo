@@ -1,7 +1,8 @@
 ngb-carousel {
   width: 80%;
-  height: 400px;
+  height: 430px;
   overflow: hide;
   margin: auto;
   background-color: mistyrose;
+  text-align: center;
 }
