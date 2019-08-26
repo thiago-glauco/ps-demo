@@ -6,7 +6,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  @ViewChild('topCarousel') topCarousel: CarouselComponent;
   constructor() { }
 
   ngOnInit() {

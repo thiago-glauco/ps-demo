@@ -16,6 +16,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCardModule} from '@angular/material/card';
 
 //carousel lib
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {CarouselModule} from "ngx-carousel-lib";
 
 import { AppComponent } from './app.component';
@@ -43,6 +44,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     MatDividerModule,
     MatButtonToggleModule,
     MatCardModule,
+    NgbModule,
     CarouselModule
     ],
   declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent, CarouselComponent, ],
