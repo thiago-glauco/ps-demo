@@ -29,6 +29,7 @@ import { CardLineComponent } from './card-line/card-line.component';
 import { HeaderComponent } from './header/header.component';
 import { DonateCardComponent } from './donate-card/donate-card.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { RoundedCardComponent } from './rounded-card/rounded-card.component';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     NgbModule,
     CarouselModule
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent, CarouselComponent, ],
+  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent, CarouselComponent, RoundedCardComponent, ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
