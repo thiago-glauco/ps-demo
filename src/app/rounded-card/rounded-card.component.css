@@ -1,14 +1,16 @@
 .rounded-card{
   padding: 5px 0px 5px 0px;
+  width: 300px;
+  text-align: center;
 }
 .rounded {
- width: 150px;
+ width: 100px;
  border-radius: 50%;
  margin: 0 auto -10px auto;
 }
 
 .rounded-card-area-texto {
-  padding: 20px auto auto auto;
+  padding: 50px auto auto auto;
   border: 2px solid salmon;
   box-shadow: 2px 2px 2px;
 }
