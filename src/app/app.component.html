@@ -2,9 +2,11 @@
 <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px" fxLayoutAlign.gt-sm="center stretch">
   <div fxFlex="5%"></div>
 <app-carousel fxFlex="50%"></app-carousel>
-<app-donate-card fxFlex></app-donate-card>
+<div fxFlex fxFlexLayout="column" fxLayout.lt-sm="row">
+  <app-donate-card ></app-donate-card>
+  <app-rounded-card ></app-rounded-card>
+</div>
 </div>
 
 <app-card-line></app-card-line>
 
-<app-rounded-card></app-rounded-card>
