@@ -1,7 +1,6 @@
 ngb-carousel {
-
   overflow: hide;
-  margin: auto;
+  margin: 5px auto 10px auto;
   background-color: salmon;
   text-align: center;
   color: black;

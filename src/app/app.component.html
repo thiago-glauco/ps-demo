@@ -1,7 +1,8 @@
 <app-header></app-header>
-<div fxLayout="row" fxLayoutAlign="center stretch">
-<app-carousel></app-carousel>
+<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px" fxLayoutAlign.gt-sm="center stretch">
+  <div fxFlex="1%"></div>
+<app-carousel fxFlex="50%"></app-carousel>
+<app-donate-card fxFlex></app-donate-card>
 </div>
 
-<app-donate-card></app-donate-card>
 <app-card-line></app-card-line>
