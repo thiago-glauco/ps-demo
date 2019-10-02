@@ -18,7 +18,6 @@ import {MatMenuModule} from '@angular/material/menu';
 
 //carousel lib
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {CarouselModule} from "ngx-carousel-lib";
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -50,7 +49,6 @@ import { FooterComponent } from './footer/footer.component';
     MatCardModule,
     NgbModule,
     MatMenuModule,
-    CarouselModule
     ],
   declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent, CarouselComponent, RoundedCardComponent, TestimonialSliderComponent, FooterComponent, ],
   bootstrap:    [ AppComponent ]
