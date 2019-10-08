@@ -32,6 +32,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { RoundedCardComponent } from './components/rounded-card/rounded-card.component';
 import { TestimonialSliderComponent } from './components/testimonial-slider/testimonial-slider.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
+//views
+import {HomeComponent} from './views/home/home.component';
 
 
 @NgModule({
@@ -49,8 +53,26 @@ import { FooterComponent } from './components/footer/footer.component';
     MatCardModule,
     NgbModule,
     MatMenuModule,
+    AppRoutingModule,
+
     ],
-  declarations: [ AppComponent, HelloComponent, UserSettingsFormComponent, UserDataFormComponent, InputNameComponent, GenericCardComponent, CardLineComponent, HeaderComponent, DonateCardComponent, CarouselComponent, RoundedCardComponent, TestimonialSliderComponent, FooterComponent, ],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    UserSettingsFormComponent,
+    UserDataFormComponent,
+    InputNameComponent,
+    GenericCardComponent,
+    CardLineComponent,
+    HeaderComponent,
+    DonateCardComponent,
+    CarouselComponent,
+    RoundedCardComponent,
+    TestimonialSliderComponent,
+    FooterComponent,
+    HomeComponent
+  ],
+
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
