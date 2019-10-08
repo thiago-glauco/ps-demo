@@ -3,7 +3,7 @@
     <img id="logo" src="https://firebasestorage.googleapis.com/v0/b/iame-e84f9.appspot.com/o/logo%2Flogo.png?alt=media&token=cc57b534-3083-4407-9eff-64443d0c1e53" alt="logo da IAME" fxFlex.gt-sm="15%" fxFlex="50%">
   </div>
   <mat-divider></mat-divider>
-<nav fxFlex fxLayout="row" fxHide.lt-sm="true">
+<nav fxFlex fxLayout="row" fxHide.sm="true" fxHide.lt-sm="true">
   <a mat-button href=""><mat-icon>home</mat-icon> Home</a>
   <a mat-button href=""><mat-icon>favorite</mat-icon> O AME</a>
   <a mat-button href=""><mat-icon>folder_open</mat-icon> Projetos</a>
@@ -13,7 +13,7 @@
   <a mat-button href=""><mat-icon>business</mat-icon> Patrocinadores</a>
   <a mat-button href=""><mat-icon>card_membership</mat-icon> Clube de Vantagens</a>
 </nav>
-<nav fxFlex fxLayout="row" fxHide.gt-xs="true">
+<nav fxFlex fxLayout="row" fxHide.gt-sm="true">
 <a mat-button [matMenuTriggerFor]="belowMenu" ><mat-icon>list</mat-icon> Menu</a>
 <mat-menu #belowMenu="matMenu" yPosition="below">
   <a mat-button href=""><mat-icon>home</mat-icon> Home</a>

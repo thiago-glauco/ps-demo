@@ -4,5 +4,5 @@ import { AppRoutingModule } from '../app-routing/app-routing.module';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full'}
+  { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];

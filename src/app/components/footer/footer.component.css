@@ -4,6 +4,10 @@ footer {
   border-bottom: 10px solid salmon;
   margin-top: 2vh;  
 }
+
+footer nav {
+  background-color: salmon;
+}
 footer img {
   background-color: white;
   margin: 1vh 1vw;
@@ -11,7 +15,7 @@ footer img {
 }
 footer a {
   padding: 1vh 1vw;
-  color: salmon;
+  color: white;
   font-weight: 600;
 }
 
