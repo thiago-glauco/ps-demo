@@ -4,26 +4,26 @@
   </div>
   <mat-divider></mat-divider>
 <nav fxFlex fxLayout="row" fxHide.sm="true" fxHide.lt-sm="true">
-  <a mat-button href=""><mat-icon>home</mat-icon> Home</a>
-  <a mat-button href=""><mat-icon>favorite</mat-icon> O AME</a>
-  <a mat-button href=""><mat-icon>folder_open</mat-icon> Projetos</a>
-  <a mat-button href=""><mat-icon>accessibility_new</mat-icon> Seja Voluntário</a>
-  <a mat-button href=""><mat-icon>card_giftcard</mat-icon> Doações</a>
-  <a mat-button href=""><mat-icon>shopping_cart</mat-icon> Loja</a>
-  <a mat-button href=""><mat-icon>business</mat-icon> Patrocinadores</a>
-  <a mat-button href=""><mat-icon>card_membership</mat-icon> Clube de Vantagens</a>
+  <a mat-button [routerLink]="['/home']"><mat-icon>home</mat-icon> Home</a>
+  <a mat-button [routerLink]="['/about']"><mat-icon>favorite</mat-icon> O AME</a>
+  <a mat-button [routerLink]="['/projetos']"><mat-icon>folder_open</mat-icon> Projetos</a>
+  <a mat-button [routerLink]="['/voluntario']"><mat-icon>accessibility_new</mat-icon> Seja Voluntário</a>
+  <a mat-button [routerLink]="['/doacao']"><mat-icon>card_giftcard</mat-icon> Doações</a>
+  <a mat-button [routerLink]="['/loja']"><mat-icon>shopping_cart</mat-icon> Loja</a>
+  <a mat-button [routerLink]="['/patrocinio']"><mat-icon>business</mat-icon> Patrocinadores</a>
+  <a mat-button [routerLink]="['/clube']"><mat-icon>card_membership</mat-icon> Clube de Vantagens</a>
 </nav>
 <nav fxFlex fxLayout="row" fxHide.gt-sm="true">
 <a mat-button [matMenuTriggerFor]="belowMenu" ><mat-icon>list</mat-icon> Menu</a>
 <mat-menu #belowMenu="matMenu" yPosition="below">
-  <a mat-button href=""><mat-icon>home</mat-icon> Home</a>
-  <a mat-button href=""><mat-icon>favorite</mat-icon> O AME</a>
-  <a mat-button href=""><mat-icon>folder_open</mat-icon> Projetos</a>
-  <a mat-button href=""><mat-icon>accessibility_new</mat-icon> Seja Voluntário</a>
-  <a mat-button href=""><mat-icon>card_giftcard</mat-icon> Doações</a>
-  <a mat-button href=""><mat-icon>shopping_cart</mat-icon> Loja</a>
-  <a mat-button href=""><mat-icon>business</mat-icon> Patrocinadores</a>
-  <a mat-button href=""><mat-icon>card_membership</mat-icon> Clube de Vantagens</a>
+  <a mat-button [routerLink]="['/home']"><mat-icon>home</mat-icon> Home</a>
+  <a mat-button [routerLink]="['/about']"><mat-icon>favorite</mat-icon> O AME</a>
+  <a mat-button [routerLink]="['/projetos']"><mat-icon>folder_open</mat-icon> Projetos</a>
+  <a mat-button [routerLink]="['/voluntario']"><mat-icon>accessibility_new</mat-icon> Seja Voluntário</a>
+  <a mat-button [routerLink]="['/doacao']"><mat-icon>card_giftcard</mat-icon> Doações</a>
+  <a mat-button [routerLink]="['/loja']"><mat-icon>shopping_cart</mat-icon> Loja</a>
+  <a mat-button [routerLink]="['/patrocinio']"><mat-icon>business</mat-icon> Patrocinadores</a>
+  <a mat-button [routerLink]="['/clube']"><mat-icon>card_membership</mat-icon> Clube de Vantagens</a>
 </mat-menu>
 </nav>
 </header>
