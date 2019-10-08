@@ -44,6 +44,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 
 //views
 import {HomeComponent} from './views/home/home.component';
+import { AboutComponent } from './views/about/about.component';
 
 
 @NgModule({
@@ -81,7 +82,8 @@ import {HomeComponent} from './views/home/home.component';
     RoundedCardComponent,
     TestimonialSliderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
 
   bootstrap:    [ AppComponent ]
