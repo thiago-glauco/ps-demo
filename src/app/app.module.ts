@@ -24,14 +24,14 @@ import { HelloComponent } from './hello.component';
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
 import { UserDataFormComponent } from './user-data-form/user-data-form.component';
 import { InputNameComponent } from './input-name/input-name.component';
-import { GenericCardComponent } from './generic-card/generic-card.component';
-import { CardLineComponent } from './card-line/card-line.component';
-import { HeaderComponent } from './header/header.component';
-import { DonateCardComponent } from './donate-card/donate-card.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { RoundedCardComponent } from './rounded-card/rounded-card.component';
-import { TestimonialSliderComponent } from './testimonial-slider/testimonial-slider.component';
-import { FooterComponent } from './footer/footer.component';
+import { GenericCardComponent } from './components/generic-card/generic-card.component';
+import { CardLineComponent } from './components/card-line/card-line.component';
+import { HeaderComponent } from './components/header/header.component';
+import { DonateCardComponent } from './components/donate-card/donate-card.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { RoundedCardComponent } from './components/rounded-card/rounded-card.component';
+import { TestimonialSliderComponent } from './components/testimonial-slider/testimonial-slider.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
