@@ -16,6 +16,14 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu'; 
 
+//firebase
+import { firebaseConf } from './shared/firebase-conf';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
+
 //carousel lib
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -40,6 +48,9 @@ import {HomeComponent} from './views/home/home.component';
 
 @NgModule({
   imports:      [ 
+    AngularFireModule.initializeApp(firebaseConf.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
