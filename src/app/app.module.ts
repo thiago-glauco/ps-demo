@@ -51,6 +51,9 @@ import { DoacaoComponent } from './views/doacao/doacao.component';
 import { LojaComponent } from './views/loja/loja.component';
 import { PatrocinioComponent } from './views/patrocinio/patrocinio.component';
 import { ClubeComponent } from './views/clube/clube.component';
+import { RealTimeDatabaseService } from './services/real-time-database.service';
+import { CarouselHomeService } from './services/carousel-home.service';
+import { StorageService } from './services/storage.service';
 
 
 @NgModule({
@@ -98,6 +101,8 @@ import { ClubeComponent } from './views/clube/clube.component';
     ClubeComponent
   ],
 
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+
+  providers: [RealTimeDatabaseService, CarouselHomeService, StorageService]
 })
 export class AppModule { }
