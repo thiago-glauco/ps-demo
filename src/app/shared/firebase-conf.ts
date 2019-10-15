@@ -7,7 +7,7 @@ export const firebaseConf = {
     projectId: "iame-e84f9",
     storageBucket: "iame-e84f9.appspot.com",
     messagingSenderId: "659195581428",
-    appId: "1:659195581428:web:4154ed4e9a3506f64a5fa1"
-
+    appId: "1:659195581428:web:6378eb6a9b43add64a5fa1",
+    measurementId: "G-XZQE9P1K27"
   }
 };

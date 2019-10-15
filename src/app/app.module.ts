@@ -54,6 +54,7 @@ import { ClubeComponent } from './views/clube/clube.component';
 import { RealTimeDatabaseService } from './services/real-time-database.service';
 import { CarouselHomeService } from './services/carousel-home.service';
 import { StorageService } from './services/storage.service';
+import { CarouselHomeComponent } from './components/carousel-home/carousel-home.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { StorageService } from './services/storage.service';
     AngularFireModule.initializeApp(firebaseConf.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    AngularFireStorageModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -98,7 +100,8 @@ import { StorageService } from './services/storage.service';
     DoacaoComponent,
     LojaComponent,
     PatrocinioComponent,
-    ClubeComponent
+    ClubeComponent,
+    CarouselHomeComponent
   ],
 
   bootstrap:    [ AppComponent ],
