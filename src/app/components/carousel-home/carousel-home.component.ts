@@ -14,7 +14,7 @@ export class CarouselHomeComponent implements OnInit {
   slides: Slider[];
 
   constructor(
-    private carouselHomeService: CarouselHomeService
+    private carouselHomeService: CarouselHomeService;
   ) { }
 
   ngOnInit() {

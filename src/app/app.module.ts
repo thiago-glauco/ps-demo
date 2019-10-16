@@ -57,6 +57,7 @@ import { StorageService } from './services/storage.service';
 import { CarouselHomeComponent } from './components/carousel-home/carousel-home.component';
 import { CardsHomeService } from './services/cards-home.service';
 import { DepoimentosService } from './services/depoimentos.service';
+import { DepoimentoComponent } from './components/depoimento/depoimento.component';
 
 
 @NgModule({
@@ -103,7 +104,8 @@ import { DepoimentosService } from './services/depoimentos.service';
     LojaComponent,
     PatrocinioComponent,
     ClubeComponent,
-    CarouselHomeComponent
+    CarouselHomeComponent,
+    DepoimentoComponent
   ],
 
   bootstrap:    [ AppComponent ],

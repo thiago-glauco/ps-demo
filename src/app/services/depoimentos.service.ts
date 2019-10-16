@@ -24,7 +24,7 @@ export class DepoimentosService {
   }
 
   getActiveDepoimentos( ) {
-    return this.db.getList<Depoimento>( this.dbRootPath ).pipe(
+    return this.db.getList( this.dbRootPath ).pipe(
       map( (depoimentos: Depoimento[]) => depoimentos.filter(depoimento => depoimento.enabled === true) )
     )
   }
