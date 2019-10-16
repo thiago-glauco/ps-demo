@@ -56,6 +56,7 @@ import { CarouselHomeService } from './services/carousel-home.service';
 import { StorageService } from './services/storage.service';
 import { CarouselHomeComponent } from './components/carousel-home/carousel-home.component';
 import { CardsHomeService } from './services/cards-home.service';
+import { DepoimentosService } from './services/depoimentos.service';
 
 
 @NgModule({
@@ -107,6 +108,6 @@ import { CardsHomeService } from './services/cards-home.service';
 
   bootstrap:    [ AppComponent ],
 
-  providers: [RealTimeDatabaseService, CarouselHomeService, StorageService, CardsHomeService]
+  providers: [RealTimeDatabaseService, CarouselHomeService, StorageService, CardsHomeService, DepoimentosService]
 })
 export class AppModule { }
