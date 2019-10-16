@@ -17,7 +17,7 @@ export class DepoimentoComponent implements OnInit {
   intervalId: number;
 
   constructor(
-    private depoimentosService: DepoimentosService;
+    private depoimentosService: DepoimentosService
   ) { }
 
   ngOnInit() {
@@ -25,6 +25,7 @@ export class DepoimentoComponent implements OnInit {
     .subscribe({
       error: error => console.log(error),
       next: list => {
+        console.dir(list);
         this.depoimentos = list
         this.depoimento = this.depoimentos[0];
         this.depoimentoId = 0;
@@ -38,15 +39,18 @@ export class DepoimentoComponent implements OnInit {
   }
 
   changeDepoimento() {
-    this.depoimento 
+    console.dir(this.depoimento);
+
     this.intervalId = setInterval( ()=>{
       if ( this.depoimentoId < this.depoimentos.length) {
         this.depoimentoId++;
         this.depoimento = this.depoimentos[this.depoimentoId];
+        console.dir(this.depoimento)
       }
       else {
         this.depoimentoId = 0;
         this.depoimento = this.depoimentos[this.depoimentoId];
+        console.dir(this.depoimento);
       }
     }, 8000)
   }
