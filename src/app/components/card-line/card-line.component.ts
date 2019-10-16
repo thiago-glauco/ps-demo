@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Card} from "../shared/card";
+import { Observable } from 'rxjs';
+import { map, tap, filter } from 'rxjs/operators';
+import { CardsHomeService } from '../../services/cards-home.service';
 
 @Component({
   selector: 'app-card-line',
@@ -6,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-line.component.css']
 })
 export class CardLineComponent implements OnInit {
-cardsObject = [
+  cards: Card[]; /* = [
   {title: "Empoderar",
     subtitle: "",
     text: "A notícia do diagnostico do filho afeta totalmente o lado psicológico da mãe. Ela entra em luto, tem dificuldade de falar sobre o assunto, não quer mostrar o filho para as pessoas. Afasta-se dos amigos, tudo isso pode levar a depressão, a síndrome do pânico e diversas outras doenças. Precisamos ajudar essas mães. Mães fortalecidas emocionalmente criam filhos fortes e felizes. ",
@@ -20,11 +24,20 @@ cardsObject = [
     subtitle: "",
     text: "A descoberta da deficiência é momento marcado por muitas dúvidas, incerteza. Dar às mães a possibilidade de fazerem contato com outras  que lidam com as mesmas questões, torna-se uma rica troca de informações e uma rede de apoio que pode mostrar à pessoa novas formas de enfrentar os desafio.",
     imgSrc: "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}
-]
+]*/
 
-  constructor() { }
+  constructor(
+    private cardsHomeService: CardsHomeService
+  ) { }
 
   ngOnInit() {
+    this.cardsHomeService.getAll()
+    .subscribe({
+      error: error => console.log(error),
+      next: cards => {
+        this.cards = cards
+        console.dir(this.cards)}
+    })
   }
 
 }
