@@ -42,10 +42,10 @@ export class DepoimentoComponent implements OnInit {
     console.dir(this.depoimento);
 
     this.intervalId = setInterval( ()=>{
-      if ( this.depoimentoId < this.depoimentos.length) {
-        this.depoimentoId++;
+      if ( this.depoimentoId <= this.depoimentos.length -1) {
         this.depoimento = this.depoimentos[this.depoimentoId];
-        console.dir(this.depoimento)
+        console.dir(this.depoimento);
+        this.depoimentoId++;
       }
       else {
         this.depoimentoId = 0;
