@@ -11,7 +11,10 @@ import { DepoimentosService } from '../../services/depoimentos.service';
 })
 export class DepoimentoComponent implements OnInit {
 
+  depoimento: Depoimento;
   depoimentos: Depoimento[];
+  depoimentoId: number;
+  intervalId: number;
 
   constructor(
     private depoimentosService: DepoimentosService;
@@ -21,8 +24,31 @@ export class DepoimentoComponent implements OnInit {
     this.depoimentosService.getActiveDepoimentos()
     .subscribe({
       error: error => console.log(error),
-      next: list => this.depoimentos = list
+      next: list => {
+        this.depoimentos = list
+        this.depoimento = this.depoimentos[0];
+        this.depoimentoId = 0;
+        this.changeDepoimento();
+      }
     })
+  }
+
+  ngOnDestroy( ) {
+    clearInterval( this.intervalId );
+  }
+
+  changeDepoimento() {
+    this.depoimento 
+    this.intervalId = setInterval( ()=>{
+      if ( this.depoimentoId < this.depoimentos.length) {
+        this.depoimentoId++;
+        this.depoimento = this.depoimentos[this.depoimentoId];
+      }
+      else {
+        this.depoimentoId = 0;
+        this.depoimento = this.depoimentos[this.depoimentoId];
+      }
+    }, 8000)
   }
 
 }

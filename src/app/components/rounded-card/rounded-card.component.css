@@ -4,10 +4,11 @@
   text-align: center;
   margin: auto auto;
 }
+
 img {
- width: 100px;
- border-radius: 50%;
- margin: 0 auto -10px auto;
+ width: 150px;
+ border-radius: 50% 50% 50% 50%;
+ margin: 0 auto -15px auto;
 }
 
 .rounded-card-area-texto {

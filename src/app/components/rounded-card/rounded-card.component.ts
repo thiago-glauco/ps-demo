@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rounded-card',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rounded-card.component.css']
 })
 export class RoundedCardComponent implements OnInit {
+  
+  @Input() texto: string;
+  @Input() img_url: string;
 
   constructor() { }
 
