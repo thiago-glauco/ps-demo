@@ -4,5 +4,4 @@ export class Depoimento {
   filename: string;
   enabled: boolean;
   id: string;
-
 }
