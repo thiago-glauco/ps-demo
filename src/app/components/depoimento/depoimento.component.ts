@@ -60,7 +60,7 @@ export class DepoimentoComponent implements OnInit {
     clearInterval( this.intervalId );
   }
 
-  changeDepoimento() {
+  /*changeDepoimento() {
     console.dir(this.depoimento);
     this.intervalId = setInterval( ()=>{
       this.visibility = "shown";
@@ -77,8 +77,32 @@ export class DepoimentoComponent implements OnInit {
       let that = this;
       setTimeout( () => { that.visibility = 'hidden' }, 7000);
     }, 8000)
-    
-    
+  }*/
+
+  changeDepoimento ( ) {
+    let that = this;
+    setTimeout( () => {
+      this.visibility = "hidden";
+      this.depoimentoId++;
+    }, 7000);
+
+    this.intervalId = setInterval( ()=>{
+      this.visibility = "shown";
+      if ( this.depoimentoId <= this.depoimentos.length -1) {
+        this.depoimento = this.depoimentos[this.depoimentoId];
+        console.dir(this.depoimento);
+        this.depoimentoId++;
+      }
+      else {
+        this.depoimentoId = 0;
+        this.depoimento = this.depoimentos[this.depoimentoId];
+        console.dir(this.depoimento);
+        this.depoimentoId++;
+      }
+      let that = this;
+      setTimeout( () => { that.visibility = 'hidden' }, 7000);
+    }, 8000)
+
   }
 
 }
