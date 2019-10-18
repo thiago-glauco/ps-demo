@@ -51,9 +51,9 @@ export class DepoimentoComponent implements OnInit {
         this.depoimentos = list
         this.depoimento = this.depoimentos[0];
         this.depoimentoId = 0;
-        this.changeDepoimento();
       }
-    })
+    });
+    this.changeDepoimento();
   }
 
   ngOnDestroy( ) {
@@ -71,12 +71,13 @@ export class DepoimentoComponent implements OnInit {
       }
       else {
         this.depoimentoId = 0;
-        //this.depoimento = this.depoimentos[this.depoimentoId];
+        this.depoimento = this.depoimentos[this.depoimentoId];
         console.dir(this.depoimento);
       }
-      setTimeout( () => { that.visibility = 'hidden' }, 7000)
+      let that = this;
+      setTimeout( () => { that.visibility = 'hidden' }, 7000);
     }, 8000)
-    let that = this;
+    
     
   }
 
