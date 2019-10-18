@@ -1,1 +1,3 @@
-<app-rounded-card [@openClose]="isOpen ? 'open' : 'closed'" [img_url]="depoimento?.url" [texto]="depoimento?.texto"></app-rounded-card>
+<div [@visibility]="visibility">
+  <app-rounded-card [img_url]="depoimento?.url" [texto]="depoimento?.texto"></app-rounded-card>
+</div>

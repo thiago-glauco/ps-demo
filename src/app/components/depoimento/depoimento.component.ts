@@ -16,25 +16,17 @@ import {
   templateUrl: './depoimento.component.html',
   styleUrls: ['./depoimento.component.css'],
   animations: [
-       trigger('openClose', [
-      // ...
-      state('open', style({
-        height: '200px',
-        opacity: 1,
-        backgroundColor: 'yellow'
-      })),
-      state('closed', style({
-        height: '100px',
-        opacity: 0.5,
-        backgroundColor: 'green'
-      })),
-      transition('open => closed', [
-        animate('1s')
-      ]),
-      transition('closed => open', [
-        animate('0.5s')
-      ]),
-    ]),
+    trigger('visibility', [
+        state('shown', style({
+            transform: 'scale(1.0)',
+            opacity: 1
+        })),
+        state('hidden', style({
+            transform: 'scale(0.5)',
+            opacity: 0
+        })),
+        transition('* => *', animate('0.5s ease-in-out'))
+    ])
   ]
 })
 export class DepoimentoComponent implements OnInit {
@@ -44,6 +36,7 @@ export class DepoimentoComponent implements OnInit {
   depoimentoId: number;
   intervalId: number;
   isOpen: boolean = true;
+  visibility = 'shown';
 
   constructor(
     private depoimentosService: DepoimentosService
@@ -69,8 +62,8 @@ export class DepoimentoComponent implements OnInit {
 
   changeDepoimento() {
     console.dir(this.depoimento);
-    this.isOpen = true;
     this.intervalId = setInterval( ()=>{
+      this.visibility = "shown";
       if ( this.depoimentoId <= this.depoimentos.length -1) {
         this.depoimento = this.depoimentos[this.depoimentoId];
         console.dir(this.depoimento);
@@ -78,12 +71,13 @@ export class DepoimentoComponent implements OnInit {
       }
       else {
         this.depoimentoId = 0;
-        this.depoimento = this.depoimentos[this.depoimentoId];
+        //this.depoimento = this.depoimentos[this.depoimentoId];
         console.dir(this.depoimento);
       }
+      setTimeout( () => { that.visibility = 'hidden' }, 7000)
     }, 8000)
     let that = this;
-    setTimeout( () => { that.isOpen = false })
+    
   }
 
 }
