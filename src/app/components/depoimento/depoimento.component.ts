@@ -87,7 +87,6 @@ export class DepoimentoComponent implements OnInit {
     }, 7000);
 
     this.intervalId = setInterval( ()=>{
-      this.visibility = "shown";
       if ( this.depoimentoId <= this.depoimentos.length -1) {
         this.depoimento = this.depoimentos[this.depoimentoId];
         console.dir(this.depoimento);
@@ -99,6 +98,7 @@ export class DepoimentoComponent implements OnInit {
         console.dir(this.depoimento);
         this.depoimentoId++;
       }
+      
       let that = this;
       setTimeout( () => { that.visibility = 'hidden' }, 7000);
     }, 8000)
