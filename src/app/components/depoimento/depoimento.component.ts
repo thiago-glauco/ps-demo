@@ -98,7 +98,7 @@ export class DepoimentoComponent implements OnInit {
         console.dir(this.depoimento);
         this.depoimentoId++;
       }
-      
+      this.visibility = "shown";
       let that = this;
       setTimeout( () => { that.visibility = 'hidden' }, 7000);
     }, 8000)
