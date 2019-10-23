@@ -27,6 +27,9 @@ import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
 //carousel lib
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+//social networks
+import {FacebookModule} from 'ngx-facebook';
+
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
@@ -105,7 +108,8 @@ import { DepoimentoComponent } from './components/depoimento/depoimento.componen
     PatrocinioComponent,
     ClubeComponent,
     CarouselHomeComponent,
-    DepoimentoComponent
+    DepoimentoComponent,
+    FacebookModule.forRoot(),
   ],
 
   bootstrap:    [ AppComponent ],
