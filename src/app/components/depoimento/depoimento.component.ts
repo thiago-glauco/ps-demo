@@ -100,8 +100,8 @@ export class DepoimentoComponent implements OnInit {
       }
       this.visibility = "shown";
       let that = this;
-      setTimeout( () => { that.visibility = 'hidden' }, 7000);
-    }, 8000)
+      setTimeout( () => { that.visibility = 'hidden' }, 8500);
+    }, 10000)
 
   }
 
