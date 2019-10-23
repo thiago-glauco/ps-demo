@@ -83,7 +83,7 @@ import { DepoimentoComponent } from './components/depoimento/depoimento.componen
     NgbModule,
     MatMenuModule,
     AppRoutingModule,
-
+    FacebookModule.forRoot(),
     ],
   declarations: [
     AppComponent,
@@ -109,7 +109,6 @@ import { DepoimentoComponent } from './components/depoimento/depoimento.componen
     ClubeComponent,
     CarouselHomeComponent,
     DepoimentoComponent,
-    FacebookModule.forRoot(),
   ],
 
   bootstrap:    [ AppComponent ],
