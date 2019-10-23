@@ -8,11 +8,15 @@
 img {
  width: 150px;
  border-radius: 50% 50% 50% 50%;
+ 
  margin: 0 auto -15px auto;
+ box-shadow: 4px 4px 4px;
 }
 
 .rounded-card-area-texto {
-  padding: 0px auto auto auto;
-  border: 2px solid salmon;
-  box-shadow: 2px 2px 2px;
+  padding: 10px auto auto auto;
+  margin: 10px;
+  background-color: mistyrose;
+  border-left: 10px solid salmon;
+  box-shadow: 3px 3px 3px;
 }
