@@ -60,6 +60,7 @@ import { CarouselHomeComponent } from './components/carousel-home/carousel-home.
 import { CardsHomeService } from './services/cards-home.service';
 import { DepoimentosService } from './services/depoimentos.service';
 import { DepoimentoComponent } from './components/depoimento/depoimento.component';
+import { AboutComponent } from './views/about/about.component';
 
 
 @NgModule({
@@ -82,7 +83,6 @@ import { DepoimentoComponent } from './components/depoimento/depoimento.componen
     NgbModule,
     MatMenuModule,
     AppRoutingModule,
-    FacebookModule.forRoot(),
     ],
   declarations: [
     AppComponent,
@@ -107,6 +107,7 @@ import { DepoimentoComponent } from './components/depoimento/depoimento.componen
     ClubeComponent,
     CarouselHomeComponent,
     DepoimentoComponent,
+    AboutComponent,
   ],
 
   bootstrap:    [ AppComponent ],

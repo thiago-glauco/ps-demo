@@ -19,9 +19,9 @@ export class CardsHomeService {
     private db: RealTimeDatabaseService
   ) { }
 
-  getAll( ) {
+  getAll( path ) {
     //this.baseRef = this.storageService.createRef( this.path );
-    return this.db.getList( this.dbRootPath )
+    return this.db.getList( path )
   }
 
 }
