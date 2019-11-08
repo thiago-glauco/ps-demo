@@ -61,6 +61,7 @@ import { CardsHomeService } from './services/cards-home.service';
 import { DepoimentosService } from './services/depoimentos.service';
 import { DepoimentoComponent } from './components/depoimento/depoimento.component';
 import { AboutComponent } from './views/about/about.component';
+import { VideoTopComponent } from './components/video-top/video-top.component';
 
 
 @NgModule({
@@ -108,6 +109,7 @@ import { AboutComponent } from './views/about/about.component';
     CarouselHomeComponent,
     DepoimentoComponent,
     AboutComponent,
+    VideoTopComponent,
   ],
 
   bootstrap:    [ AppComponent ],
