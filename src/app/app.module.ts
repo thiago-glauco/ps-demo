@@ -47,7 +47,6 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 
 //views
 import {HomeComponent} from './views/home/home.component';
-import { AboutComponent } from './views/about/about.component';
 import { ProjetosComponent } from './views/projetos/projetos.component';
 import { VoluntarioComponent } from './views/voluntario/voluntario.component';
 import { DoacaoComponent } from './views/doacao/doacao.component';
@@ -100,7 +99,6 @@ import { DepoimentoComponent } from './components/depoimento/depoimento.componen
     TestimonialSliderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
     ProjetosComponent,
     VoluntarioComponent,
     DoacaoComponent,
