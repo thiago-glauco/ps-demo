@@ -1,7 +1,7 @@
 mat-card {
-  margin: 15px;
   background-color: mistyrose;
   border-left: 10px solid salmon;
+  margin: 15px auto;
 }
 
 mat-icon {
