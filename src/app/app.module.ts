@@ -62,6 +62,7 @@ import { DepoimentosService } from './services/depoimentos.service';
 import { DepoimentoComponent } from './components/depoimento/depoimento.component';
 import { AboutComponent } from './views/about/about.component';
 import { VideoTopComponent } from './components/video-top/video-top.component';
+import { DemonstrativoComponent } from './components/demonstrativo/demonstrativo.component';
 
 
 @NgModule({
@@ -110,6 +111,7 @@ import { VideoTopComponent } from './components/video-top/video-top.component';
     DepoimentoComponent,
     AboutComponent,
     VideoTopComponent,
+    DemonstrativoComponent,
   ],
 
   bootstrap:    [ AppComponent ],
