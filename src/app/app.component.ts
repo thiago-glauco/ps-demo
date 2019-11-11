@@ -33,9 +33,9 @@ import {
         )
       ])
     ])
-  ] // register the animations
-
+  ]
 })
+
 export class AppComponent  {
   name = 'Angular';
 }
