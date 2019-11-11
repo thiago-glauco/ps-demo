@@ -28,7 +28,7 @@ import {
         ),
         query(
           ':enter',
-          [style({ opacity: 0 }), animate('08s', style({ opacity: 1 }))],
+          [style({ opacity: 0 }), animate('0.8s', style({ opacity: 1 }))],
           { optional: true }
         )
       ])
